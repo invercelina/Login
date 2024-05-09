@@ -85,24 +85,31 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             modifier = Modifier
                 .height(50.dp)
         )
-        Text(
-            text = "중재자",
-            fontSize = 30.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
                 .border(2.dp, Color.Green, RoundedCornerShape(4.dp))
-                .padding(20.dp, 10.dp)
-        )
-        Text(
-            text = "항상 선을 행할 준비가 되어 있는 부드럽고 친절한 이타주의자입니다.",
-            fontSize = 25.sp,
-            modifier = Modifier
-                .width(350.dp)
-                .padding(40.dp)
-        )
+                .padding(0.dp, 30.dp)
+        ) {
+            Text(
+                text = "중재자",
+                fontSize = 30.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier
+
+                    .padding(20.dp, 10.dp)
+            )
+            Text(
+                text = "항상 선을 행할 준비가 되어 있는 부드럽고 친절한 이타주의자입니다.",
+                fontSize = 25.sp,
+                modifier = Modifier
+                    .width(350.dp)
+                    .padding(40.dp)
+            )
+        }
+
         Spacer(
             modifier = Modifier
-                .height(80.dp)
+                .height(75.dp)
         )
     }
 }
